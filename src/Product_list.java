@@ -16,4 +16,7 @@ public class Product_list {
     public void removeproduct(int i) throws IOException {
         products.remove(i);
     }
+    public Product getProduct(int i){
+        return products.get(i);
+    }
 }
