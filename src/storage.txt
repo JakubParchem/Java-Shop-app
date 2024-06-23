@@ -1,3 +1,2 @@
 jajko,0.5
-chleb,2.68
-zupa ogórkowa,10.55
+zupa,0.5

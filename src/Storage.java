@@ -4,8 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Storage{
-    private ArrayList<Product> products=new ArrayList<Product>();
+public class Storage extends Product_list{
     Scanner input=new Scanner(System.in);
     public Storage() throws IOException {
         File f=new File("src/storage.txt");
@@ -14,17 +13,14 @@ public class Storage{
             addProduct(new Product(reader.next()));
         }
     }
-    public void display(){
-        for (int i = 0; i <products.size() ; i++){
-            System.out.println("[ "+i+" ]  "+ products.get(i));
-        }
-    }
+    @Override
     public void addProduct(Product p) throws IOException {
-        products.add(p);
+        super.addProduct(p);
         save();
     }
+    @Override
     public void removeproduct(int i) throws IOException {
-        products.remove(i);
+        super.removeproduct(i);
         save();
     }
     public void edit_product(int i) throws IOException {
