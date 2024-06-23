@@ -1,22 +1,25 @@
 public class Product {
     protected String name;
     protected double price;
+    public int amount;
 
-    public Product(String name, double price) {
+    public Product(String name, double price , int amount) {
         this.name = name;
         this.price = price;
+        this.amount=amount;
     }
     public Product(String s){
         String[] S=s.split(",");
         this.name=S[0];
         this.price=Double.parseDouble(S[1]);
+        this.amount=Integer.parseInt(S[2]);
     }
     @Override
     public String toString() {
-        return name + "    cena: " + price+" zł";
+        return name + "    price: " + price+" zł";
     }
     public String display(){
-        return name+","+price;
+        return name+","+price+","+amount;
     }
     public void updatePrice(double nprice){
         price=nprice;

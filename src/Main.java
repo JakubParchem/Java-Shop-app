@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -13,8 +14,37 @@ public class Main {
                 "\n");
         Storage storage=new Storage();
         Basket basket =new Basket();
-        basket.display();
-        storage.Storage_Menagment();
+        Scanner input=new Scanner(System.in);
+        while (true){
+            System.out.println("\n0 - Shop\n1 - Storage Menagment\n2 - exit");
+            System.out.print("what do you want to do : ");
+            switch (input.nextInt()){
+                case 0:{
+                    storage.display(false);
+                    break;
+                }
+                case 1:{
+                    storage.Storage_Menagment();
+                    break;
+                }
+                case 2:{
+                    System.out.println("\n" +
+                            "\n" +
+                            "   _____              __  __               __          __            __\n" +
+                            "  / ___/___  ___      \\ \\/ /___  __  __   / /   ____ _/ /____  _____/ /\n" +
+                            "  \\__ \\/ _ \\/ _ \\      \\  / __ \\/ / / /  / /   / __ `/ __/ _ \\/ ___/ / \n" +
+                            " ___/ /  __/  __/      / / /_/ / /_/ /  / /___/ /_/ / /_/  __/ /  /_/  \n" +
+                            "/____/\\___/\\___/      /_/\\____/\\__,_/  /_____/\\__,_/\\__/\\___/_/  (_)   \n" +
+                            "                                                                       \n" +
+                            "\n");
+                    return;
+                }
+                default:{
+                    System.out.println("wrong input");
+                    break;
+                }
+            }
+        }
 
     }
 }

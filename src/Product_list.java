@@ -5,9 +5,16 @@ import java.util.Scanner;
 public class Product_list {
     protected ArrayList<Product> products=new ArrayList<Product>();
     Scanner input=new Scanner(System.in);
-    public void display(){
-        for (int i = 0; i <products.size() ; i++){
-            System.out.println("[ "+i+" ]  "+ products.get(i));
+    public void display(boolean show_amount){
+        if(show_amount){
+            for (int i = 0; i <products.size() ; i++){
+                System.out.println("[ "+i+" ]  "+ products.get(i)+"    amount: "+ products.get(i).amount);
+            }
+        }
+        else{
+            for (int i = 0; i <products.size() ; i++){
+                System.out.println("[ "+i+" ]  "+ products.get(i));
+            }
         }
     }
     public void addProduct(Product p) throws IOException {

@@ -1,2 +1,3 @@
-jajko,0.5
-zupa,0.5
+jajko,0.5,5
+zupa,0.5,2
+chleb,2.46,10

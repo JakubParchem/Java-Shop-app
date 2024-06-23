@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Storage extends Product_list{
@@ -62,14 +61,15 @@ public class Storage extends Product_list{
     public void Storage_Menagment() throws IOException {
         int i=0;
         String s="";
+        double d=0.0;
         while(true){
-            display();
+            display(true);
             System.out.println("------------------------\nStorage Menagment\n\n0 - edit\n1 - add\n2 - remove\n3 - exit\n");
             System.out.print("what do you want to do: ");
             switch (input.nextInt()){
                 case 0:{
                     while (true){
-                        display();
+                        display(true);
                         System.out.print("------------------------\nwhich product do you want to edit[id] : ");
                         i=input.nextInt();
                         if(i>=0 && i< products.size()){
@@ -87,12 +87,14 @@ public class Storage extends Product_list{
                     input.nextLine();
                     s=input.nextLine();
                     System.out.print("input price: ");
-                    addProduct(new Product(s,input.nextDouble()));
+                    d=input.nextDouble();
+                    System.out.print("input amount: ");
+                    addProduct(new Product(s,d,input.nextInt()));
                     break;
                 }
                 case 2:{
                     while (true){
-                        display();
+                        display(true);
                         System.out.print("------------------------\nwhich product do you want to delete[id] : ");
                         i=input.nextInt();
                         if(i>=0 && i< products.size()){
