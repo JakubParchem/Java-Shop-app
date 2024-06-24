@@ -12,6 +12,13 @@ public class Storage extends Product_list{
             addProduct(new Product(reader.next()));
         }
     }
+
+    @Override
+    public void display(boolean show_amount) {
+        System.out.println("Storage: ");
+        super.display(show_amount);
+    }
+
     @Override
     public void addProduct(Product p) throws IOException {
         super.addProduct(p);

@@ -13,7 +13,6 @@ public class Main {
                 "                                           /_/            /_/   /_/      \n" +
                 "\n");
         Storage storage=new Storage();
-        Basket basket =new Basket();
         Scanner input=new Scanner(System.in);
         while (true){
             System.out.println("\n0 - Shop\n1 - Storage Menagment\n2 - exit");

@@ -14,6 +14,11 @@ public class Product {
         this.price=Double.parseDouble(S[1]);
         this.amount=Integer.parseInt(S[2]);
     }
+    public Product(Product p,int amount){
+        this.name= p.name;
+        this.price=p.price;
+        this.amount=amount;
+    }
     @Override
     public String toString() {
         return name + "    price: " + price+" zł";
