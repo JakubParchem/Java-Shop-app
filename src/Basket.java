@@ -16,7 +16,7 @@ public class Basket extends Product_list{
     public void BasketManagment(){
         while(true){
             display(false);
-            System.out.println("\n0 - proceed to payment\n 1 - return to shoping\n\nwhat do you want to do: ");
+            System.out.print("\n0 - proceed to payment\n 1 - return to shoping\n\nwhat do you want to do: ");
             switch (input.nextInt()){
                 case 0:{
                     System.out.println("Bought: \n------------\n");
@@ -25,6 +25,12 @@ public class Basket extends Product_list{
                     System.exit(1);
                 }
                 case 1:{
+                    return;
+                }
+                default:{
+                    System.out.println("wrong input");
+                    break;
+                }
             }
         }
     }
